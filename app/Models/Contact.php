@@ -13,6 +13,8 @@ class Contact extends Model
 protected $guarded = [];
 
    public function student(){
+
+   //for one to one and onle to many
       return $this->belongsTo(Student::class);
    }
 }

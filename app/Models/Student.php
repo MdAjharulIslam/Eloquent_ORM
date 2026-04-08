@@ -12,6 +12,10 @@ class Student extends Model
    protected $guarded = [];
 
    public function contact(){
+      //for one to one
     return $this->hasOne(Contact::class);
+
+    //for one to many
+   //  return $this->hasOne(Contact::class);
    }
 }

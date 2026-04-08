@@ -26,11 +26,21 @@ class studentController extends Controller
      */
     public function create()
     {
-        $students = Student::create([
-         'name' => 'ajharul islam',
-         'age' =>'22',
-         'gender'=>'Male'
-        ]);
+        // $students = Student::create([
+        //  'name' => 'ajharul islam',
+        //  'age' =>'22',
+        //  'gender'=>'Male'
+        // ]);
+
+        // $students->contact()->create([
+        //           'email'=>'ajharulislam@gmail.com',
+        //           'phone'=> '01795277954',
+        //           'city' => 'dhaka'
+        // ]);
+
+        // for insert in one to many relation
+
+        $students = Student::find(3);
 
         $students->contact()->create([
                   'email'=>'ajharulislam@gmail.com',
