@@ -38,6 +38,8 @@ class studentController extends Controller
         //           'city' => 'dhaka'
         // ]);
 
+        
+
         // for insert in one to many relation
 
         $students = Student::find(3);
