@@ -10,4 +10,9 @@ class Contact extends Model
 {
       use HasFactory;
    public $timestamps = false;
+protected $guarded = [];
+
+   public function student(){
+      return $this->belongsTo(Student::class);
+   }
 }

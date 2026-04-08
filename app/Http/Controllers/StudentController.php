@@ -12,12 +12,13 @@ class studentController extends Controller
      */
     public function index()
     {
-        // $students=  Student::with('contact')->get();
+         $students=  Student::with('contact')->get();
     //   $students=  Student::with('contact')->find(20);
 
-    $students = Student::withWhereHas('contact', function($query){
-                                $query->where('city',"Abernathyberg");})->get();
-        return $students;
+    // $students = Student::where('gender',"Female")
+    // ->withWhereHas('contact', function($query){
+    //                             $query->where('student_id','>',"10");})->get();
+      return $students;
     }
 
     /**
@@ -25,7 +26,17 @@ class studentController extends Controller
      */
     public function create()
     {
-        //
+        $students = Student::create([
+         'name' => 'ajharul islam',
+         'age' =>'22',
+         'gender'=>'Male'
+        ]);
+
+        $students->contact()->create([
+                  'email'=>'ajharulislam@gmail.com',
+                  'phone'=> '01795277954',
+                  'city' => 'dhaka'
+        ]);
     }
 
     /**
