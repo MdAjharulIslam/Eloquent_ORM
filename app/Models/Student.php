@@ -16,6 +16,6 @@ class Student extends Model
     return $this->hasOne(Contact::class);
 
     //for one to many
-   //  return $this->hasOne(Contact::class);
+   //  return $this->hasMany(Contact::class);
    }
 }

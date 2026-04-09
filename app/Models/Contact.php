@@ -14,7 +14,7 @@ protected $guarded = [];
 
    public function student(){
 
-   //for one to one and onle to many
+   //for one to one and one to many
       return $this->belongsTo(Student::class);
    }
 }
