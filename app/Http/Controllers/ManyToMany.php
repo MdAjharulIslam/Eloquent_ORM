@@ -142,3 +142,6 @@ Route::get('/show/{id}', [StudentController::class, 'show']);
 Route::get('/update/{id}', [StudentController::class, 'update']);
 Route::get('/add/{id}', [StudentController::class, 'addCourse']);
 Route::get('/remove/{id}', [StudentController::class, 'removeCourse']);
+
+
+
