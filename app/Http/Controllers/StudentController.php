@@ -12,12 +12,12 @@ class studentController extends Controller
      */
     public function index()
     {
-         $students=  Student::with('contact')->get();
+        //  $students=  Student::with('contact')->get();
     //   $students=  Student::with('contact')->find(20);
 
-    // $students = Student::where('gender',"Female")
-    // ->withWhereHas('contact', function($query){
-    //                             $query->where('student_id','>',"10");})->get();
+    $students = Student::
+    withWhereHas('contact', function($query){
+                                $query->where('student_id','>',"10");})->find(11);
       return $students;
     }
 
