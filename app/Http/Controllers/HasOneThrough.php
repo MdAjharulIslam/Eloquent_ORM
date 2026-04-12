@@ -43,6 +43,10 @@ class Country extends Model
 {
     protected $fillable = ['name'];
 
+    public function user(){
+        return $this->hasOne(User::class);
+    }
+
     // hasOneThrough relationship
     public function profile()
     {
