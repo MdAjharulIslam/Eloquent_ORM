@@ -82,7 +82,7 @@ class StudentController extends Controller
             'name' => 'Ajhar'
         ]);
 
-        // Create courses (for demo)
+        // Create courses 
         $c1 = Course::create(['title' => 'Math']);
         $c2 = Course::create(['title' => 'Physics']);
         $c3 = Course::create(['title' => 'Chemistry']);
